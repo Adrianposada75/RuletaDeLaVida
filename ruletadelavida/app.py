@@ -472,6 +472,7 @@ def descargar_excel():
                 FROM respuestas r
                 JOIN usuarios u ON r.usuario_id = u.id
             """, conn)
+            
         
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
